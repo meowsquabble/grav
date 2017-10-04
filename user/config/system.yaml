@@ -4,7 +4,7 @@ home:
   alias: '/home'
 
 pages:
-  theme: antimatter
+  theme: meows
   markdown:
     extra: false
   process:
