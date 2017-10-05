@@ -1,0 +1,165 @@
+@import url(../node_modules/tachyons/css/tachyons.min.css);
+.ms-rhythm-border-all {
+  border: 1px solid ms-get-color(gray-medium);
+  padding: 1rem-0.0625rem; }
+
+.ms-u-baseline-bg {
+  background-image: linear-gradient(to top, #d6d6d6 5%, rgba(214, 214, 214, 0) 5%);
+  background-size: 100% 0.5rem;
+  background-position: 0 1px; }
+
+html {
+  font-size: 100%;
+  line-height: 1em;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  box-sizing: border-box; }
+
+body {
+  margin: 0; }
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
+
+@font-face {
+  font-family: 'Akzidenz Grotesk';
+  src: url("../fonts/AkzidenzGrotesk-Light.woff2") format("woff2"), url("../fonts/AkzidenzGrotesk-Light.woff") format("woff");
+  font-weight: normal; }
+@font-face {
+  font-family: 'Akzidenz Grotesk';
+  src: url("../fonts/AkzidenzGrotesk-LightItalic.woff2") format("woff2"), url("../fonts/AkzidenzGrotesk-LightItalic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic; }
+@font-face {
+  font-family: 'Akzidenz Grotesk';
+  src: url("../fonts/AkzidenzGrotesk-Bold.woff2") format("woff2"), url("../fonts/AkzidenzGrotesk-Bold.woff") format("woff");
+  font-weight: bold; }
+body {
+  font-size: 100%;
+  font-family: "Akzidenz Grotesk", Helvetica, Arial, sans-serif;
+  font-weight: normal; }
+
+h1 {
+  font-size: 5.61023rem;
+  line-height: 6rem;
+  margin: 0; }
+
+h2 {
+  font-size: 4.20873rem;
+  line-height: 5rem;
+  margin: 0; }
+
+h3 {
+  font-size: 3.15733rem;
+  line-height: 4rem;
+  margin: 0; }
+
+h4 {
+  font-size: 2.36859rem;
+  line-height: 3rem;
+  margin: 0; }
+
+h5 {
+  font-size: 1.77689rem;
+  line-height: 2rem;
+  margin: 0; }
+
+h6 {
+  font-size: 1.333rem;
+  line-height: 2rem;
+  margin: 0; }
+
+p {
+  font-size: 1rem;
+  line-height: 1rem;
+  margin: 0; }
+
+small {
+  font-size: 0.75019rem;
+  line-height: 1rem;
+  margin: 0; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  margin-bottom: 1rem; }
+
+p {
+  color: #535050;
+  line-height: 1.5rem;
+  margin-bottom: 2rem;
+  max-width: 30em; }
+
+hr {
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-color: #e8a273;
+  margin-top: 2rem;
+  margin-bottom: 2rem; }
+
+.ms-body-container {
+  padding: 1.5rem; }
+  @media screen and (min-width: 48.75rem) {
+    .ms-body-container {
+      padding: 0; } }
+
+.ms-header {
+  position: fixed;
+  top: 3.5rem;
+  width: 100%;
+  display: flex; }
+  @media screen and (min-width: 48.75rem) {
+    .ms-header {
+      left: 2rem;
+      max-width: 13em; } }
+
+.ms-logo {
+  margin-bottom: 1rem; }
+
+.ms-main-nav__item {
+  display: inline-block;
+  font-size: 1rem;
+  line-height: 2rem;
+  color: #535050;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid #fff;
+  transition: all 200ms ease-in-out; }
+  .ms-main-nav__item:hover, .ms-main-nav__item:focus, .ms-main-nav__item:active {
+    border-bottom-color: #f15a24;
+    transition: all 200ms ease-in-out; }
+  .ms-main-nav__item ~ .ms-main-nav__item {
+    margin-left: 1rem; }
+  @media screen and (min-width: 48.75rem) {
+    .ms-main-nav__item {
+      display: block; }
+      .ms-main-nav__item ~ .ms-main-nav__item {
+        margin-left: 0; } }
+
+.ms-main {
+  margin-top: 7rem;
+  width: 100%; }
+  @media screen and (min-width: 22.5rem) {
+    .ms-main {
+      max-width: 32em; } }
+  @media screen and (min-width: 48.75rem) {
+    .ms-main {
+      margin-left: 16rem; } }
+
+.ms-footer .ms-u-gradient-sunset {
+  background-image: linear-gradient(135deg, #f7f7f7 0%, #e8a273 50%, #f7f7f7 100%); }
+
+/*# sourceMappingURL=main.css.map */

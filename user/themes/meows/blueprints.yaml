@@ -1,0 +1,27 @@
+name: Meows
+version: 0.1.0
+description: meow squabble custom theme
+icon: rebel
+author:
+  name: chungsi
+  email: actsang@sfu.ca
+homepage: https://github.com/chungsi/grav-theme-meows
+demo: http://demo.yoursite.com
+keywords: grav, theme, etc
+bugs: https://github.com/chungsi/grav-theme-meows/issues
+readme: https://github.com/chungsi/grav-theme-meows/blob/develop/README.md
+license: MIT
+
+form:
+  validation: loose
+  fields:
+    dropdown.enabled:
+        type: toggle
+        label: Dropdown in Menu
+        highlight: 1
+        default: 1
+        options:
+          1: PLUGIN_ADMIN.ENABLED
+          0: PLUGIN_ADMIN.DISABLED
+        validate:
+          type: bool

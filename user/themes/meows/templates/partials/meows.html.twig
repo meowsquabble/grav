@@ -1,0 +1,73 @@
+{% set theme_config = attribute(config.themes, config.system.pages.theme) %}
+<!DOCTYPE html>
+<html lang="{{ grav.language.getActive ?: theme_config.default_lang }}">
+<head>
+{% block head %}
+  <meta charset="utf-8" />
+  <title>{% if header.title %}{{ header.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% include 'partials/metadata.html.twig' %}
+
+  <link rel="icon" type="image/png" href="{{ page.url('theme://images/randomLogo.svg') }}" />
+  <link rel="canonical" href="{{ page.url(true, true) }}" />
+
+  {% block stylesheets %}
+    {% do assets.addCss('theme://css/main.css', 100) %}
+  {% endblock %}
+  {{ assets.css() }}
+
+  {% block javascripts %}
+    {% do assets.addJs('jquery', 100) %}
+  {% endblock %}
+  {{ assets.js() }}
+
+{% endblock head%}
+</head>
+
+<body class="{{ page.header.body_classes }}">
+
+  <div class="ms-body-container">
+
+    {% block header %}
+      <header class="ms-header">
+        <a class="ms-logo" href="{{ base_url == '' ? '/' : base_url }}">
+          <img src="{{ page.url('theme://images/randomLogo.svg') }}" width="80px">
+          {# {{ config.site.title }} #}
+        </a>
+        {% block header_navigation %}
+        <nav class="ms-main-nav">
+          {# {% include 'partials/navigation.html.twig' %} #}
+          <a href="#project-brief" class="ms-main-nav__item">purrject brief</a>
+          <a href="#squad" class="ms-main-nav__item">the squad</a>
+          <a href="#progress" class="ms-main-nav__item">paw-gress updates</a>
+        </nav>
+        {% endblock %}
+      </header>
+    {% endblock %}
+
+    {% block body %}
+      <main class="ms-main">
+        {# <div class=""> #}
+          {% block content %}{% endblock %}
+        {# </div> #}
+      </main>
+    {% endblock %}
+
+  </div>
+
+  {% block footer %}
+    <footer class="ms-footer w-100 h1 bg-gold fixed bottom-0">
+      <div class="ms-u-gradient-sunset w-100 h-100 relative"></div>
+    </footer>
+  {% endblock %}
+
+
+  {% block bottom %}
+      {{ assets.js('bottom') }}
+  {% endblock %}
+
+</body>
+
+</html>
