@@ -1,4 +1,19 @@
-{% macro loop(page) %}
+{% block header_navigation %}
+<nav class="ms-main-nav">
+  <a class="ms-main-nav__item" href="{{ base_url == '' ? '/' : base_url }}">
+    <img class="ms-logo" src="{{ url('theme://images/randomLogo.svg') }}">
+    {# {{ config.site.title }} #}
+  </a>
+  {# {% include 'partials/navigation.html.twig' %} #}
+  <a href="{{ base_url }}#project-brief" class="ms-main-nav__item ms-main-nav__link">purrject brief</a>
+  <a href="{{ base_url }}#squad" class="ms-main-nav__item ms-main-nav__link">the squad</a>
+  <a href="{{ base_url }}/updates/" class="ms-main-nav__item ms-main-nav__link">paw-gress updates</a>
+</nav>
+{% endblock %}
+
+
+
+{# {% macro loop(page) %}
   {% for p in page.children.visible %}
   {% set current_page = (p.active or p.activeChild) ? 'selected' : '' %}
     {% if p.children.visible.count > 0 %}
@@ -46,3 +61,4 @@
   {% endfor %}
 </ul>
 
+ #}

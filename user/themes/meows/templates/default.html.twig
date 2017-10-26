@@ -1,5 +1,9 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block content %}
-    {{ page.content }}
+  {{ page.content }}
+    
+  <hr>
+  {% include 'partials/blogroll.html.twig' %}
 {% endblock %}
+

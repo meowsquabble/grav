@@ -1,0 +1,27 @@
+title: Blog
+'@extends':
+    type: default
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+
+        content:
+          title: PLUGIN_ADMIN.CONTENT
+
+          fields:
+            header.blog_post_header:
+              ordering@: header.title
+              type: markdown
+              validate:
+                type: textarea
+              label: Blog Post Header
+            header.header_img:
+              ordering@: header.title
+              type: file
+              label: Header Image

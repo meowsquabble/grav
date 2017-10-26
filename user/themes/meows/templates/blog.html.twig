@@ -1,0 +1,40 @@
+{% extends 'partials/base.html.twig' %}
+
+{% set blog_post_header = page.header.blog_post_header %}
+{% set header_image = page.header.header_image|defined(true) %}
+{% set header_image_file = page.header.header_image_file %}
+
+
+{% block content %}
+
+  {# {% block blog_header %} #}
+    {% if blog_post_header %}
+    <header>
+      {{ blog_post_header|markdown }}
+    </header>
+    {% endif %}
+  {# {% endblock %} #}
+
+  
+    {{ page.content }}
+
+    <hr>
+
+    {% block pagination %}
+      {# works in stack-structure #}
+
+      {% if not page.isLast %}
+        <p><strong>Next</strong> / <a href="{{ page.prevSibling.url }}">
+          {{ page.prevSibling.title }}
+        </a> &gt;&gt;</p>
+      {% endif %}
+
+      {% if not page.isFirst %}
+        <p>&lt;&lt; <strong>Prev</strong> / <a href="{{ page.nextSibling.url }}">
+          {{ page.nextSibling.title }}
+        </a></p>
+      {% endif %}
+
+    {% endblock %}
+
+{% endblock %}

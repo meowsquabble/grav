@@ -10,12 +10,15 @@ taxonomy:
   tag: [meow, squabble]
 ---
 
+<div id="project-brief"></div>
 ## tennis purrject
 
 What do competitive tennis players do to improve their game? Currently options include rigorous practice and using a personal (human) coach. But what if players could take it a step further with a tool that tracks statistics, analyzes performance, and identifies areas of improvement? Our project explores the creation of such a tool.
 
 ***
 
+
+<div id="squad"></div>
 ### the squad
 
 Our team (or "Meow Squabble" as we call ourselves) is made up of four Simon Fraser University students in the Interactive Arts and Technology (SIAT) program. We each hold various areas of expertise, from programming to visual arts, and are working under the wing of instructor Andrew H, who is guiding us through our project's research and development.  

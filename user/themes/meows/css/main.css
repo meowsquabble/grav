@@ -41,7 +41,7 @@ hr {
   font-style: italic; }
 @font-face {
   font-family: 'Akzidenz Grotesk';
-  src: url("../fonts/AkzidenzGrotesk-Bold.woff2") format("woff2"), url("../fonts/AkzidenzGrotesk-Bold.woff") format("woff");
+  src: url("../fonts/AkzidenzGrotesk-Regular.woff2") format("woff2"), url("../fonts/AkzidenzGrotesk-Regular.woff") format("woff");
   font-weight: bold; }
 body {
   font-size: 100%;
@@ -50,52 +50,60 @@ body {
 
 h1 {
   font-size: 5.61023rem;
+  font-weight: normal;
   line-height: 6rem;
-  margin: 0; }
+  margin: 0 0 1rem 0;
+  max-width: 32em;
+  letter-spacing: -0.025em; }
 
 h2 {
   font-size: 4.20873rem;
+  font-weight: normal;
   line-height: 5rem;
-  margin: 0; }
+  margin: 0 0 1rem 0;
+  max-width: 32em;
+  letter-spacing: -0.025em; }
 
 h3 {
   font-size: 3.15733rem;
+  font-weight: normal;
   line-height: 4rem;
-  margin: 0; }
+  margin: 0 0 1rem 0;
+  max-width: 32em;
+  letter-spacing: -0.025em; }
 
 h4 {
   font-size: 2.36859rem;
+  font-weight: normal;
   line-height: 3rem;
-  margin: 0; }
+  margin: 0 0 1rem 0;
+  max-width: 32em; }
 
 h5 {
   font-size: 1.77689rem;
+  font-weight: normal;
   line-height: 2rem;
-  margin: 0; }
+  margin: 0 0 1rem 0;
+  max-width: 32em; }
 
 h6 {
   font-size: 1.333rem;
+  font-weight: normal;
   line-height: 2rem;
-  margin: 0; }
+  margin: 0 0 1rem 0;
+  max-width: 32em; }
 
 p {
   font-size: 1rem;
   line-height: 1rem;
-  margin: 0; }
+  margin: 0;
+  max-width: 32em; }
 
 small {
   font-size: 0.75019rem;
   line-height: 1rem;
-  margin: 0; }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: bold;
-  margin-bottom: 1rem; }
+  margin: 0;
+  max-width: 32em; }
 
 p {
   color: #535050;
@@ -104,11 +112,21 @@ p {
   max-width: 30em; }
 
 hr {
+  max-width: 32em;
+  text-align: left;
   border-width: 0 0 1px 0;
   border-style: solid;
   border-color: #e8a273;
-  margin-top: 2rem;
-  margin-bottom: 2rem; }
+  margin: 2rem 0;
+  transform: rotate(-1deg); }
+
+main a {
+  color: #535050;
+  border-bottom: 1px solid #f15a24;
+  transition: all 200ms ease-in-out;
+  text-decoration: none; }
+  main a:hover {
+    border-bottom-color: white; }
 
 .ms-body-container {
   padding: 1.5rem; }
@@ -116,47 +134,62 @@ hr {
     .ms-body-container {
       padding: 0; } }
 
-.ms-header {
-  position: fixed;
-  top: 3.5rem;
-  width: 100%;
-  display: flex; }
-  @media screen and (min-width: 48.75rem) {
-    .ms-header {
-      left: 2rem;
-      max-width: 13em; } }
+@media screen and (min-width: 48.75rem) {
+  .ms-header {
+    position: fixed;
+    top: 3.5rem;
+    left: 2rem;
+    max-width: 13em; } }
 
 .ms-logo {
-  margin-bottom: 1rem; }
+  width: 5rem; }
+  @media screen and (min-width: 48.75rem) {
+    .ms-logo {
+      margin-bottom: 2rem; } }
+
+.ms-main-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; }
+  @media screen and (min-width: 28.125rem) {
+    .ms-main-nav {
+      flex-direction: row;
+      align-items: center; } }
+  @media screen and (min-width: 48.75rem) {
+    .ms-main-nav {
+      flex-direction: column;
+      align-items: flex-start; } }
 
 .ms-main-nav__item {
   display: inline-block;
   font-size: 1rem;
-  line-height: 2rem;
   color: #535050;
-  text-decoration: none;
-  margin-bottom: 0.5rem;
-  border-bottom: 1px solid #fff;
+  padding: 0.5rem 0;
   transition: all 200ms ease-in-out; }
   .ms-main-nav__item:hover, .ms-main-nav__item:focus, .ms-main-nav__item:active {
     border-bottom-color: #f15a24;
     transition: all 200ms ease-in-out; }
   .ms-main-nav__item ~ .ms-main-nav__item {
-    margin-left: 1rem; }
+    margin-left: 0.5rem; }
+  @media screen and (min-width: 28.125rem) {
+    .ms-main-nav__item ~ .ms-main-nav__item {
+      margin-left: 1rem; } }
   @media screen and (min-width: 48.75rem) {
-    .ms-main-nav__item {
-      display: block; }
-      .ms-main-nav__item ~ .ms-main-nav__item {
-        margin-left: 0; } }
+    .ms-main-nav__item ~ .ms-main-nav__item {
+      margin-left: 0.5rem; } }
+
+.ms-main-nav__link {
+  text-decoration: none;
+  border-bottom: 1px solid #fff;
+  margin-bottom: 0.5rem; }
 
 .ms-main {
-  margin-top: 7rem;
-  width: 100%; }
-  @media screen and (min-width: 22.5rem) {
-    .ms-main {
-      max-width: 32em; } }
+  margin-top: 2.5rem;
+  margin-bottom: 5rem;
+  width: auto; }
   @media screen and (min-width: 48.75rem) {
     .ms-main {
+      margin-top: 7rem;
       margin-left: 16rem; } }
 
 .ms-footer .ms-u-gradient-sunset {

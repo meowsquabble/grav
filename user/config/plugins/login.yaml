@@ -21,6 +21,9 @@ user_registration:
   access:
     site:
       login: 'true'
+    admin:
+      super: 'true'
+      login: 'true'
   options:
     validate_password1_and_password2: true
     set_user_disabled: false

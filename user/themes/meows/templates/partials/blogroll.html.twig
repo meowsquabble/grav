@@ -1,0 +1,20 @@
+{% block blog_roll %}
+<div class="ms-blogroll">
+  <h3>paw-gress updates</h3>
+  {% for p in page.find('/updates').children.order('date', 'desc') %}
+    {# {% set bannerimage = p.media['banner.jpg'] %} #}
+    <div class="recent-post">
+      {# {% if bannerimage %}
+        <div class="recent-post-image">{{ bannerimage.cropZoom(60,60).quality(60) }}</div>
+      {% else %}
+        <div class="recent-post-image"><img src="{{ url('theme://images/logo.png') }}" width="60" height="60"></div>
+      {% endif %} #}
+      <div class="recent-post-text">
+        <h6><a href="{{p.url}}">{{ p.title }}</a></h6>
+        <p>{{ p.date|date("M j, Y")}}</p>
+        <p>{{ p.summary() }}</p>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+{% endblock %}
