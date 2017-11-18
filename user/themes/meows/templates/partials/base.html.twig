@@ -32,25 +32,23 @@
 
     {% block header %}
       <header class="ms-header">
+        <div class="ms-header__border"></div>
         {% include 'partials/navigation.html.twig' %}
       </header>
     {% endblock %}
 
     {% block body %}
       <main class="ms-main">
-        {# <div class=""> #}
-          {# {% block content_header %}{% endblock %} #}
-          {% block content %}{% endblock %}
-        {# </div> #}
+        {% block content %}{% endblock %}
       </main>
     {% endblock %}
 
   </div>
 
   {% block footer %}
-    <footer class="ms-footer w-100 h1 bg-gold fixed bottom-0">
+    {# <footer class="ms-footer w-100 h1 bg-gold fixed bottom-0">
       <div class="ms-u-gradient-sunset w-100 h-100 relative"></div>
-    </footer>
+    </footer> #}
   {% endblock %}
 
 

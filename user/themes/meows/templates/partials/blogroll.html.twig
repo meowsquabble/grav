@@ -1,20 +1,17 @@
 {% block blog_roll %}
-<div class="ms-blogroll">
-  <h3>paw-gress updates</h3>
+  {# update to have a toggle for subsection? #}
+<section class="ms-blogroll ms-main__subsection">
+  <header class="ms-section-header">
+    <h2 class="ms-blogroll__title ms-main__subtitle ms-section-header__title">process</h2>
+  </header>
   {% for p in page.find('/updates').children.order('date', 'desc') %}
-    {# {% set bannerimage = p.media['banner.jpg'] %} #}
-    <div class="recent-post">
-      {# {% if bannerimage %}
-        <div class="recent-post-image">{{ bannerimage.cropZoom(60,60).quality(60) }}</div>
-      {% else %}
-        <div class="recent-post-image"><img src="{{ url('theme://images/logo.png') }}" width="60" height="60"></div>
-      {% endif %} #}
-      <div class="recent-post-text">
-        <h6><a href="{{p.url}}">{{ p.title }}</a></h6>
-        <p>{{ p.date|date("M j, Y")}}</p>
-        <p>{{ p.summary() }}</p>
-      </div>
-    </div>
+    <a href="{{ p.url }}" class="ms-blogroll__item">
+      <p class="ms-blogroll__item-entry-num">{{ p.header.blog_post_entry_num }}</p>
+      <p class="ms-blogroll__item-title">{{ p.header.blog_post_title }}</p>
+      <p class="ms-blogroll__item-date">{{ p.header.blog_post_weeks }} / {{ p.header.blog_post_dates }}</p>
+      <div class="ms-blogroll__item-summary">{{ p.summary(36) }}</div>
+    </a>
+    <hr>
   {% endfor %}
-</div>
+</section>
 {% endblock %}

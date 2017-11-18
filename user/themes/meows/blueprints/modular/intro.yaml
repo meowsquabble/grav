@@ -1,0 +1,28 @@
+title: Modular Intro
+'@extends':
+    type: default
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+
+      fields:
+        content:
+          title: PLUGIN_ADMIN.CONTENT
+
+          fields:
+            header.project_title:
+              ordering@: header.title
+              type: text
+              label: Project Title
+
+            header.project_subtitle:
+              ordering@: header.project_title
+              type: text
+              label: Project Subtitle
+
+            header.intro_image:
+              ordering@: header.project_subtitle
+              type: text
+              label: Intro Image path

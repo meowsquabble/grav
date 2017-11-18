@@ -1,6 +1,10 @@
 ---
 title: 'Paw-gress Update #0: Why we are doing this?'
-blog_post_header: "_Week 1 (September 5 – 11)_  \r\n#####Paw-gress Update #0  \r\n##Why we are doing this?  \r\n\r\n![A cat narrowly avoiding being hit by a barrage of tennis balls.](/images/cats_update0.jpg)"
+header_image_file: cats_update0.jpg
+blog_post_title: 'Why we are doing this?'
+blog_post_entry_num: '00'
+blog_post_weeks: 'week 1'
+blog_post_dates: 'Sept 05'
 date: '11-09-2017 00:00'
 metadata:
     author: 'Meow Squabble'
@@ -8,6 +12,9 @@ taxonomy:
     tag:
         - blog
 menu: 'Paw-gress Update #0'
+header_img_file: cats_update0.jpg
+header_img: cats_update0.jpg
+blog_post_header: "_Week 1 (September 5 – 11)_  \r\n#####Paw-gress Update #0  \r\n##Why we are doing this?  \r\n\r\n![A cat narrowly avoiding being hit by a barrage of tennis balls.](/images/cats_update0.jpg)"
 ---
 
 > “You know what? Tennis is a pretty complicated sport. How do we pinpoint match trends, so that players can understand where and why they are losing points?  

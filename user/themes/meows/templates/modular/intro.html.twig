@@ -1,0 +1,22 @@
+
+<section class="ms-intro ms-main__main">
+
+  <header class="ms-section-header ms-intro__header">
+    <h1 class="ms-section-header__title ms-main__title">{{ page.header.project_title }}</h1>
+    {% if page.header.project_subtitle %}
+      <p class="ms-section-header__subtitle">{{ page.header.project_subtitle }}</p>
+    {% endif %}
+  </header>
+
+  {% if page.header.intro_image %}
+    <div class="ms-intro__image">
+      <img src="{{ page.media[page.header.intro_image].url }}">
+    </div>
+  {% endif %}
+
+  <section class="ms-intro__p">
+    {{ content }}
+  </section>
+
+  <div class="ms-intro__bg"></div>
+</section>

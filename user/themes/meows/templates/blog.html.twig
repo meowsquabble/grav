@@ -1,40 +1,61 @@
 {% extends 'partials/base.html.twig' %}
 
-{% set blog_post_header = page.header.blog_post_header %}
+{# {% set blog_post_header = page.header.blog_post_header %} #}
 {% set header_image = page.header.header_image|defined(true) %}
 {% set header_image_file = page.header.header_image_file %}
+
+{% set blog_post_entry_num = page.header.blog_post_entry_num %}
+{% set blog_post_title = page.header.blog_post_title %}
+{% set blog_post_weeks = page.header.blog_post_weeks %}
+{% set blog_post_dates = page.header.blog_post_dates %}
 
 
 {% block content %}
 
-  {# {% block blog_header %} #}
-    {% if blog_post_header %}
-    <header>
-      {{ blog_post_header|markdown }}
-    </header>
+  <header class="ms-blog-header">
+  {% block header_image %}
+    {% if header_image_file %}
+      <img src="{{ page.media[header_image_file].url }}" class="ms-blog-header__image">
     {% endif %}
-  {# {% endblock %} #}
+  {% endblock %}
+
+  {% block blog_entry_number %}
+    <div class="ms-blog-header__entry-num">{{ blog_post_entry_num }}</div>
+  {% endblock %}
+
+    <h1 class="ms-blog-header__title">{{ blog_post_title }}</h1>
+    <p class="ms-blog-header__date">
+      <span class="ms-blog-header__weeks">{{ blog_post_weeks }}</span> /
+      <span class="ms-blog-header__dates">{{ blog_post_dates }}</span>
+    </p>
+  </header>
 
   
-    {{ page.content }}
+  {{ page.content }}
 
-    <hr>
 
-    {% block pagination %}
-      {# works in stack-structure #}
+  {% block pagination %}
+    {# works in stack-structure #}
+    <section class="ms-pagination">
+      <hr>
 
-      {% if not page.isLast %}
-        <p><strong>Next</strong> / <a href="{{ page.prevSibling.url }}">
-          {{ page.prevSibling.title }}
-        </a> &gt;&gt;</p>
-      {% endif %}
+    {% if not page.isLast %}
+      <a href="{{ page.prevSibling.url }}" class="ms-pagination__next">
+        <p class="ms-pagination__blog-entry-num">{{ page.prevSibling.header.blog_post_entry_num }}</p>
+        <p class="ms-pagination__blog-title">{{ page.prevSibling.header.blog_post_title }}</p>
+        <p class="ms-pagination__blog-date">{{ page.prevSibling.header.blog_post_weeks }} / {{ page.prevSibling.header.blog_post_dates }}</p>
+      </a>
+    {% endif %}
 
-      {% if not page.isFirst %}
-        <p>&lt;&lt; <strong>Prev</strong> / <a href="{{ page.nextSibling.url }}">
-          {{ page.nextSibling.title }}
-        </a></p>
-      {% endif %}
+    {% if not page.isFirst %}
+      <a href="{{ page.nextSibling.url }}" class="ms-pagination__prev">
+        <p class="ms-pagination__blog-entry-num">{{ page.nextSibling.header.blog_post_entry_num }}</p>
+        <p class="ms-pagination__blog-title">{{ page.nextSibling.header.blog_post_title }}</p>
+        <p class="ms-pagination__blog-date">{{ page.nextSibling.header.blog_post_weeks }} / {{ page.nextSibling.header.blog_post_dates }}</p>
+      </a>
+    {% endif %}
 
-    {% endblock %}
+    </section>
+  {% endblock %}
 
 {% endblock %}

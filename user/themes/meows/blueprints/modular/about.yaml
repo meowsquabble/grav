@@ -1,0 +1,23 @@
+title: Modular About
+'@extends':
+    type: default
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+
+      fields:
+        content:
+          title: PLUGIN_ADMIN.CONTENT
+
+          fields:
+            header.squad_title:
+              ordering@: header.title
+              type: text
+              label: Squad Title
+
+            header.squad_subtitle:
+              ordering@: header.squad_title
+              type: text
+              label: Squad Subtitle

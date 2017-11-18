@@ -15,13 +15,36 @@ form:
           title: PLUGIN_ADMIN.CONTENT
 
           fields:
-            header.blog_post_header:
+            header.header_image_file:
               ordering@: header.title
-              type: markdown
+              type: text
+              label: Header Image Path
+              help: image filename that exists in the page folder
+
+            header.blog_post_title:
+              ordering@: header.header_image_file
+              type: text
               validate:
                 type: textarea
-              label: Blog Post Header
-            header.header_img:
-              ordering@: header.title
-              type: file
-              label: Header Image
+              label: Blog Post Title
+
+            header.blog_post_entry_num:
+              ordering@: header.blog_post_title
+              type: text
+              validate:
+                type: textarea
+              label: Blog Post Entry Num
+
+            header.blog_post_weeks:
+              ordering@: header.blog_post_entry_num
+              type: text
+              validate:
+                type: textarea
+              label: Blog Post Weeks
+              
+            header.blog_post_dates:
+              ordering@: header.blog_post_weeks
+              type: text
+              validate:
+                type: textarea
+              label: Blog Post Dates

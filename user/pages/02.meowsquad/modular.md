@@ -1,13 +1,13 @@
 ---
 title: huehue
 content:
-    items: '@self.children'
-    limit: 5
+    items: '@self.modular'
     order:
         by: date
         dir: desc
-    pagination: true
-    url_taxonomy_filters: true
+    limit: '5'
+    pagination: '1'
+    url_taxonomy_filters: '1'
 ---
 
 # Grav is Running!

@@ -1,6 +1,9 @@
 ---
 title: 'Paw-gress Update #1: Tennis - How does it work?'
-blog_post_header: "_Weeks 2-3 (September 12 – 25)_\r\n#####Paw-gress Update 1\r\n##Tennis - How does it work?\r\n\r\n![A cat trying to figure out how a tennis ball works](/images/cats.jpg)\r\n"
+blog_post_title: 'Tennis - How does it work?'
+blog_post_entry_num: '01'
+blog_post_weeks: 'weeks 2-3'
+blog_post_dates: 'Sept 06-25'
 date: '25-09-2017 00:00'
 metadata:
     author: 'Meow Squabble'
@@ -8,6 +11,7 @@ taxonomy:
     tag:
         - blog
 menu: 'paw-gress update 1'
+blog_post_header: "_Weeks 2-3 (September 12 – 25)_\r\n#####Paw-gress Update 1\r\n##Tennis - How does it work?\r\n\r\n![A cat trying to figure out how a tennis ball works](/images/cats.jpg)\r\n"
 ---
 
 “What is tennis? How does it work? What is the tennis community?” These are the questions we are looking to understand. In conducting generative research, Meow Squad set out to the Coquitlam Tennis Club (CTC) to gather information about the community and their most commonly neglected needs. Ultimately, this information will inform a design solution that solves one or more of the unmet needs of competitive tennis players.
