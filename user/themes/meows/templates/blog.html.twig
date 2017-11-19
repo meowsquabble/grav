@@ -39,19 +39,19 @@
     <section class="ms-pagination">
       <hr>
 
-    {% if not page.isLast %}
-      <a href="{{ page.prevSibling.url }}" class="ms-pagination__next">
-        <p class="ms-pagination__blog-entry-num">{{ page.prevSibling.header.blog_post_entry_num }}</p>
-        <p class="ms-pagination__blog-title">{{ page.prevSibling.header.blog_post_title }}</p>
-        <p class="ms-pagination__blog-date">{{ page.prevSibling.header.blog_post_weeks }} / {{ page.prevSibling.header.blog_post_dates }}</p>
-      </a>
-    {% endif %}
-
     {% if not page.isFirst %}
       <a href="{{ page.nextSibling.url }}" class="ms-pagination__prev">
         <p class="ms-pagination__blog-entry-num">{{ page.nextSibling.header.blog_post_entry_num }}</p>
         <p class="ms-pagination__blog-title">{{ page.nextSibling.header.blog_post_title }}</p>
         <p class="ms-pagination__blog-date">{{ page.nextSibling.header.blog_post_weeks }} / {{ page.nextSibling.header.blog_post_dates }}</p>
+      </a>
+    {% endif %}
+
+    {% if not page.isLast %}
+      <a href="{{ page.prevSibling.url }}" class="ms-pagination__next">
+        <p class="ms-pagination__blog-entry-num">{{ page.prevSibling.header.blog_post_entry_num }}</p>
+        <p class="ms-pagination__blog-title">{{ page.prevSibling.header.blog_post_title }}</p>
+        <p class="ms-pagination__blog-date">{{ page.prevSibling.header.blog_post_weeks }} / {{ page.prevSibling.header.blog_post_dates }}</p>
       </a>
     {% endif %}
 

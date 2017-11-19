@@ -105,11 +105,17 @@ small {
   margin: 0;
   max-width: 32em; }
 
-p {
+p,
+ul,
+ol,
+blockquote {
   color: #535050;
   line-height: 1.5rem;
   margin-bottom: 2rem;
   max-width: 30em; }
+
+li {
+  margin-bottom: 0.5rem; }
 
 hr {
   text-align: left;
@@ -289,9 +295,9 @@ main a {
   margin-bottom: 2.5rem; }
   .ms-blog-header__image {
     position: relative;
-    transform: rotate(-3deg);
+    transform: rotate(-2deg);
     z-index: -1;
-    margin-left: -4rem;
+    margin-left: -3rem;
     max-width: 40rem; }
   .ms-blog-header__entry-num {
     font-style: italic;
