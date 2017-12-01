@@ -1,10 +1,10 @@
 enabled: true
-route: /admin
+route: /meowboss
 cache_enabled: false
 theme: grav
-logo_text: gusting
+logo_text: 'meow squabble'
 content_padding: true
-twofa_enabled: true
+twofa_enabled: false
 sidebar:
   activate: tab
   hover_delay: 100
